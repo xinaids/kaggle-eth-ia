@@ -1,0 +1,53 @@
+\typeout{SBC Conference Style}
+\oddsidemargin 0.0in
+\evensidemargin 0.0in
+\topmargin -0.30in
+\headheight 0.2in
+\headsep 0.30in
+\textheight 9.0in
+\textwidth 6.5in
+\columnsep 0.25in
+\usepackage{indentfirst}
+\usepackage{times}
+\usepackage{graphicx}
+\usepackage{url}
+\makeatletter
+% Comandos de autor/instituição do modelo SBC
+\newcommand{\inst}[1]{\unskip$^{#1}$}
+\newcommand{\email}[1]{\hspace*{0.5cm}\texttt{#1}\par}
+\def\address#1{\gdef\@address{#1}}
+\def\@address{}
+\def\@maketitle{%
+  \newpage \null \vskip 2em%
+  \begin{center}%
+  \let \footnote \thanks
+    {\LARGE\bf \@title \par}%
+    \vskip 1.5em%
+    {\large \lineskip .5em%
+      \begin{tabular}[t]{c}%
+        \@author
+      \end{tabular}\par}%
+    \vskip 1em%
+    {\normalsize \@address \par}%
+  \end{center}%
+  \par \vskip 1.5em}
+\def\abstract{\begin{center}%
+{\bf Abstract. \vspace{-.5em}\vspace{0pt}}%
+\end{center}\quotation}
+\def\endabstract{\par\endquotation}
+\def\resumo{\begin{center}%
+{\bf Resumo. \vspace{-.5em}\vspace{0pt}}%
+\end{center}\quotation}
+\def\endresumo{\par\endquotation}
+\setlength{\parindent}{1.27cm}
+\renewcommand{\section}{\@startsection{section}{1}{\z@}%
+  {-3.5ex plus -1ex minus -.2ex}{2.3ex plus .2ex}%
+  {\reset@font\large\bf}}
+\renewcommand{\subsection}{\@startsection{subsection}{2}{\z@}%
+  {-3.25ex plus -1ex minus -.2ex}{1.5ex plus .2ex}%
+  {\reset@font\normalsize\bf}}
+\renewcommand{\subsubsection}{\@startsection{subsubsection}{3}{\z@}%
+  {-3.25ex plus -1ex minus -.2ex}{1.5ex plus .2ex}%
+  {\reset@font\normalsize\bf}}
+\makeatother
+\flushbottom
